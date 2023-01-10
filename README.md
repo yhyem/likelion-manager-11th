@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+#### 2주차 과제
+Tic-Tac-Toe 프로젝트 파일 구조와 컴포넌트 분리 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Folder structure
+```
+├── src
+│   ├── components  
+│   │   ├── Square.js
+│   │   └── Table.js 
+│   ├── pages  
+│   │   └── Start.js 
+│   └── styles
+│       ├── Square.css
+│       └── Table.css
+├── App.js
+│      
+└── README.md
+```
 
-## Available Scripts
+## 파일 구조
+파일 구조 -> components : 페이지를 구성하는 요소 컴포넌트 , pages : 화면상 나타나는 페이지 (선언된 컴포넌트 사용), styles : css 스타일링 파일
 
-In the project directory, you can run:
+## 컴포넌트 분리 이유
+Square : 하나의 사각형 컴포넌트
+Table : 9개의 Square 컴포넌트를 불러 테이블 형태로 나타내는 컴포넌트
+Start : 테이블 컴포넌트를 불러와 화면상에 나타내는 페이지
 
-### `yarn start`
+## 필요 함수 로직 이유
+1. 초기값 세팅 함수 : 처음 접속시 null 값 세팅 함수 
+2. 차례를 감지 함수 : 첫번째 유저와 두번째 유저에 각각 다른 마크를 표시 함수
+3. 승자 결정 함수 : 먼저 3개 배열하였을때 승자를 결정하기 위한 함수
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### 커밋 컨벤션
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+| 머릿말   | 설명                               |
+| -------- | ---------------------------------- |
+| feat     | 기능 구현                          |
+| setting  | 패키지 설치, 개발 설정             |
+| refactor | 기능변화 없이 최적화, 코드 개선 등 |
+| fix      | 버그 수정                          |
+| style    | 스타일링, 변수명 수정              |
+| docs     | README.md 작성,주석 추가           |
 
-### `yarn test`
+#### 브랜치 네이밍 컨벤션
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+주차별 단위 구현
+branch는 main 에서 분기
+예시) feature/week2
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+| 머릿말  | 설명                        |
+| ------- | --------------------------- |
+| main    | 최종 결과                  |
+| feature | 기능 단위 구현              |
+| fix     | main에서 발견된 버그 수정 |
