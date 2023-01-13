@@ -1,6 +1,9 @@
 #### 2주차 과제
 Tic-Tac-Toe 프로젝트 파일 구조와 컴포넌트 분리 
 
+#### 3주차 과제
+Tic-Tac-Toe 프로텍트 기능 구현
+
 ## Folder structure
 ```
 ├── src
